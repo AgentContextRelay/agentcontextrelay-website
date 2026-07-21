@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  --color-acr-50: #f0f7ff;
+  --color-acr-100: #e0effe;
+  --color-acr-200: #b9dffd;
+  --color-acr-300: #7cc5fc;
+  --color-acr-400: #36a8f8;
+  --color-acr-500: #0c8de9;
+  --color-acr-600: #0070c7;
+  --color-acr-700: #0159a1;
+  --color-acr-800: #064c85;
+  --color-acr-900: #0b3f6e;
+  --color-acr-950: #072849;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100 antialiased;
+  }
+
+  ::selection {
+    @apply bg-acr-500/20;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-acr-600 hover:bg-acr-700 text-white font-semibold rounded-xl transition-all duration-200 shadow-lg shadow-acr-500/25 hover:shadow-acr-500/40;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-900 dark:text-gray-100 font-semibold rounded-xl border border-gray-200 dark:border-gray-700 transition-all duration-200;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white font-medium rounded-lg transition-colors;
+  }
+
+  .section-heading {
+    @apply text-3xl sm:text-4xl font-bold tracking-tight;
+  }
+
+  .section-subtitle {
+    @apply mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl;
+  }
+
+  .card {
+    @apply bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 transition-all duration-200 hover:border-acr-300 dark:hover:border-acr-700 hover:shadow-lg;
+  }
+
+  .glass {
+    @apply bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200/50 dark:border-gray-800/50;
+  }
+
+  .code-block {
+    @apply bg-gray-900 dark:bg-gray-950 text-gray-100 rounded-xl p-5 font-mono text-sm leading-relaxed overflow-x-auto;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-acr-500 to-blue-600 bg-clip-text text-transparent;
+  }
+
+  .hero-glow {
+    @apply absolute inset-0 -z-10;
+    background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(12, 141, 233, 0.15), transparent 70%);
+  }
+
+  .section-divider {
+    @apply w-24 h-1 bg-gradient-to-r from-acr-500 to-blue-500 rounded-full;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { @apply bg-gray-300 dark:bg-gray-700 rounded-full; }
+::-webkit-scrollbar-thumb:hover { @apply bg-gray-400 dark:bg-gray-600; }
