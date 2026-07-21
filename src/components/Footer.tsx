@@ -8,11 +8,7 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 font-bold text-lg mb-3">
-              <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-                <rect width="32" height="32" rx="8" className="fill-acr-600" />
-                <path d="M8 12h6l4 8-4 4H8l4-6-4-6Z" fill="white" />
-                <path d="M18 8h6l-4 8 4 4h-6l-4-6 4-6Z" fill="white" opacity="0.7" />
-              </svg>
+              <img src="/logo.svg" alt="ACR" width="28" height="28" className="dark:invert" />
               <span>ACR</span>
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-400">

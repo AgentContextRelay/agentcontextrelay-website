@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://agentcontextrelay.com"),
   robots: { index: true, follow: true },
   icons: {
-    icon: "/favicon.svg",
+    icon: "/logo.svg",
   },
 };
 

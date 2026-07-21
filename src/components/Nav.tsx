@@ -13,11 +13,7 @@ export function Nav() {
     <nav className="glass sticky top-0 z-50">
       <div className="container-custom flex items-center justify-between h-16">
         <Link href="/" className="flex items-center gap-2.5 font-bold text-lg">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <rect width="32" height="32" rx="8" className="fill-acr-600" />
-            <path d="M8 12h6l4 8-4 4H8l4-6-4-6Z" fill="white" />
-            <path d="M18 8h6l-4 8 4 4h-6l-4-6 4-6Z" fill="white" opacity="0.7" />
-          </svg>
+          <img src="/logo.svg" alt="ACR" width="32" height="32" className="dark:invert" />
           <span className="hidden sm:inline">ACR</span>
         </Link>
 
